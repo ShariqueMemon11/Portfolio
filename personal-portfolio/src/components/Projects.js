@@ -1,43 +1,51 @@
 import { Col, Container, Nav, Row, Tab } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import colorSharp2 from "../assets/img/color-sharp2.png"
-import projImg1 from "../assets/img/project-img1.png"
-import projImg2 from "../assets/img/project-img2.png"
-import projImg3 from "../assets/img/project-img3.png"
+import trading_bot from "../assets/img/trading_bot.png"
+import Dapp from "../assets/img/Dapp.png"
+import QA_Bot from "../assets/img/QA_Bot.png"
+import Executive_dashboard from "../assets/img/Executive_dashboard.png"
+import finance_tracker from "../assets/img/finance_tracker.png"
+import Medi_Care from "../assets/img/Medi_Care.png"
 export const Projects = () => {
     
-    const projects = [
+    const Appprojects = [
         {
         title: "Business Startup",
         description: "Design & Development",
-        imgUrl: projImg1,
+        imgUrl: finance_tracker,
         },
         {
         title: "Business Startup",
         description: "Design & Development",
-        imgUrl: projImg2,
-        },
-        {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg3,
-        },
-        {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg1,
-        },
-        {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg2,
-        },
-        {
-        title: "Business Startup",
-        description: "Design & Development",
-        imgUrl: projImg3,
-        },        
+        imgUrl: Medi_Care,
+        }
     ];
+    const webprojects = [
+        {
+        title: "Business Startup",
+        description: "Design & Development",
+        imgUrl: Dapp,
+        },
+        {
+        title: "Business Startup",
+        description: "Design & Development",
+        imgUrl: Executive_dashboard,
+        },
+    ]
+
+    const Aiprojects = [
+        {
+        title: "Business Startup",
+        description: "Design & Development",
+        imgUrl: QA_Bot,
+        },
+        {
+        title: "Business Startup",
+        description: "Design & Development",
+        imgUrl: trading_bot,
+        },
+    ]
     return(
         <section className="project" id='projects'>
             <Container>
@@ -48,20 +56,20 @@ export const Projects = () => {
                         <Tab.Container id="project-tabs" defaultActiveKey='first'>
                         <Nav variant="pills" className="nav-pills mb-5 justify-content align -item-center" id='pills-tab'> 
                             <Nav.Item>
-                                <Nav.Link eventKey="first">Tab 1</Nav.Link>
+                                <Nav.Link eventKey="first">App</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="second">Tab 2</Nav.Link>
+                                <Nav.Link eventKey="second">Web</Nav.Link>
                             </Nav.Item>
                             <Nav.Item>
-                                <Nav.Link eventKey="third">Tab 3</Nav.Link>
+                                <Nav.Link eventKey="third">Ai</Nav.Link>
                             </Nav.Item>
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey='first'>
                                 <Row>
                                     {
-                                        projects.map((project, index) => {
+                                        Appprojects.map((project, index) => {
                                             return(
                                                 <ProjectCard
                                                 key={index}
@@ -74,7 +82,7 @@ export const Projects = () => {
                             <Tab.Pane eventKey='second'>
                                 <Row>
                                     {
-                                        projects.map((project, index) => {
+                                        webprojects.map((project, index) => {
                                             return(
                                                 <ProjectCard
                                                 key={index}
@@ -87,9 +95,11 @@ export const Projects = () => {
                             <Tab.Pane eventKey='third'>
                                 <Row>
                                     {
-                                        projects.map((project, index) => {
+                                        Aiprojects.map((project, index) => {
                                             return(
-                                                <p>{project.title}</p>
+                                                <ProjectCard
+                                                 key={index}
+                                                 {...project}/>
                                             )
                                         })
                                     }
@@ -100,7 +110,7 @@ export const Projects = () => {
                     </Col>
                 </Row>
             </Container>
-            <img className="backgrounf-image-right" src={colorSharp2}></img>
+            <img className="background-image-right" src={colorSharp2}></img>
 
         </section>
     );
