@@ -6,7 +6,7 @@ import navIcon2 from '../assets/img/nav-icon2.svg'
 import navIcon3 from '../assets/img/nav-icon3.svg'
 export const NavBar = () => {
   const [activeLink , setactiveLink] = useState('home')
-  const [Scrolled , setScrolled] = useState('false')
+  const [Scrolled , setScrolled] = useState(false)
   
   useEffect (() => {
     const onScroll = () => {
@@ -27,7 +27,7 @@ export const NavBar = () => {
     setactiveLink(value);
   }
   return (
-    <Navbar expand="lg"className={Scrolled ? "Scrolled" : ''} >
+    <Navbar expand="md" className={Scrolled ? "scrolled" : ''} >
       <Container>
         <Navbar.Brand href="#home">
             <img src={logo} alt='Logo'/>
