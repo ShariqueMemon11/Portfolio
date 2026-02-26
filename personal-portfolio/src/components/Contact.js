@@ -1,8 +1,8 @@
 import { useState } from "react"
 import { Col, Container, Row } from "react-bootstrap"
 import contactImg from '../assets/img/contact-img.svg'
-import Whatsapp from '../assets/img/WhatsApp-Logo.wine.png'
-import Gmail from '../assets/img/Gmail-Logo.wine.png'
+import WhatsappLogo from '../assets/img/WhatsApp-Logo.wine.png'
+import GmailLogo from '../assets/img/Gmail-Logo.wine.png'
 
 export const Contact = () => {
     const formInitialDetails = {
@@ -12,7 +12,7 @@ export const Contact = () => {
         Message:'',
     }
     const [formDetails , setformDetalis] = useState(formInitialDetails)
-    const [buttonText , setButtonText ] = useState('send')
+    const [buttonText , setButtonText ] = useState('Send')
     const [status , setStatus] = useState({})
 
     const onFormUpdate =(category , value) => {
@@ -24,22 +24,26 @@ export const Contact = () => {
 
     const handleSubmit= async (e) => {
         e.preventDefault();
-        setButtonText('Sending...')
-        let response = await fetch ('http://localhost:5000/contact', {
-            method: 'Post',
-            headers:{
-                'Content-Type': "Application/json;charset=utf-8"
-            },
-            body:JSON.stringify(formDetails)
-        });
-        setButtonText('send')
-        let result=response.json();
-        setformDetalis(formInitialDetails);
-        if (result.code === 200){
-            setStatus({success:true, message:"Message sent successfully"})
-        } else {
-            setStatus({success:false, message:"Something went wrong, please try again later"})
-        }
+        
+        // Change button to "Sending..."
+        setButtonText('Sending...');
+        
+        // Simulate sending delay
+        setTimeout(() => {
+            // Show alert
+            alert(`Thank you for your message!\n\nName: ${formDetails.Name}\nEmail: ${formDetails.email}\nPhone: ${formDetails.phone}\nMessage: ${formDetails.Message}`);
+            
+            // Change to "Sent"
+            setButtonText('Sent');
+            
+            // Clear form
+            setformDetalis(formInitialDetails);
+            
+            // After 2 seconds, change back to "Send"
+            setTimeout(() => {
+                setButtonText('Send');
+            }, 2000);
+        }, 1000);
     };
 
     return(
@@ -81,7 +85,7 @@ export const Contact = () => {
                             <Col md={6} className="contact-method">
                                 <div className="contact-card">
                                     <div className="contact-icon">
-                                        <img src={Whatsapp} alt="WhatsApp"/>
+                                        <img src={WhatsappLogo} alt="WhatsApp"/>
                                     </div>
                                     <div className="contact-details">
                                         <h4>Whatsapp</h4>
@@ -95,7 +99,7 @@ export const Contact = () => {
                             <Col md={6} className="contact-method">
                                 <div className="contact-card">
                                     <div className="contact-icon">
-                                        <img src={Gmail} alt="Gmail"/>
+                                        <img src={GmailLogo} alt="Gmail"/>
                                     </div>
                                     <div className="contact-details">
                                         <h4>Email</h4>

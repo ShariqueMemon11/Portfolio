@@ -9,7 +9,7 @@ export const Banner = () => {
 
     const [LoopNum , setLoopNum] = useState(0);
     const [IsDeleting , setIsDeleting] = useState(false);
-    const toRotate = ["Web Developer" , "Mobile App Developer" , 'Frontend Developer' ,"Ui/Ux Designer , Ai Developer , Backend Developer"];
+    const toRotate = ["Web Developer", "Mobile App Developer", "Frontend Developer", "Ui/Ux Designer", "Ai/Ml engineer", "Backend Developer", "Game Developer"];
     const [text , settext] = useState('');
     const period=1700;
     const [delta , setdelta] = useState(350 - Math.random() * 100)
@@ -47,18 +47,20 @@ export const Banner = () => {
         <section className="banner" id="home">
             <Container>
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
+                    <Col xs={12} md={6} xl={7} className="banner-text-col">
                       <TrackVisibility>
                       {({isVisible}) =>
                       <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                       <span className="tagline">Welcome to my Portfolio</span>
                       <h1>{`Hi I'm Shariq `}<br/><span className="wrap">{text}</span></h1>
                       <p>Hey there! I'm a CS student on a mission 🚀—constantly coding, vibing, and crushing tech challenges. I live for pushing boundaries, experimenting with new tech, and turning wild ideas into reality. Currently, I'm deep into building Cross-Platform Mobile Apps because why settle for one platform when you can own them all? Let's code, create, and make some digital magic together! 💻🔥 </p>
-                      <button onClick={() => console.log('connect')}>Let's connect <ArrowRightCircle size={25} /></button>
+                      <a href="/resume.pdf" download="Shariq_Resume.pdf" className="resume-btn">
+                        <button>Resume <ArrowRightCircle size={25} /></button>
+                      </a>
                       </div>}
                       </TrackVisibility>
                     </Col>
-                    <Col xs={12} md={6} xl={5}>
+                    <Col xs={12} md={6} xl={5} className="banner-img-col">
                       <img src={headerImg} alt="Header Img" />
                     </Col>
                 </Row>

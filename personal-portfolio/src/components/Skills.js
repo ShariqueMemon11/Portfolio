@@ -1,66 +1,78 @@
-import { Col, Row, Container } from "react-bootstrap";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-import meter1 from '../assets/img/meter1.svg'
-import meter2 from '../assets/img/meter2.svg'
-import meter3 from '../assets/img/meter3.svg'
-import colorSharp from "../assets/img/color-sharp.png"
+import { useState } from "react";
+import { Container } from "react-bootstrap";
 
 export const Skills = () => {
-    const responsive = {
-        superLargeDesktop: {
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 3
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
+    const [activeTab, setActiveTab] = useState("Frontend");
+
+    const skillsData = {
+        Frontend: [
+            { name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+            { name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+            { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { name: "Flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" },
+            { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
+            { name: "Tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
+            { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" }
+        ],
+        Backend: [
+            { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+            { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
+            { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+            { name: "Express", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+            { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+            { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" }
+        ],
+        Game: [
+            { name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" },
+            { name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" },
+            { name: "Pygame", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+            { name: "Unity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg" },
+            { name: "Godot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/godot/godot-original.svg" }
+        ],
+        Tools: [
+            { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
+            { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
+            { name: "VSCode", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
+            { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+            { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
+            { name: "Postman", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" },
+            { name: "MySQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" }
+        ]
     };
 
-    return(
-        <section className="skill" id='skills'>
+    return (
+        <section className="skills" id="skills">
             <Container>
-                <Row>
-                    <Col>
-                      <div className="skill-bx">
-                        <h2>Skills</h2>
-                        <p>🚀—constantly coding, vibing, and crushing tech challenges.</p>
-                        <Carousel 
-                          responsive={responsive} 
-                          infinite={true} 
-                          className="skill-slider"
-                        >
-                      <div className="item">
-                        <img src={meter1} alt="Image"/>
-                        <h5>Mobile App Development</h5>
-                      </div>
-                      <div className="item">
-                        <img src={meter2} alt="Image"/>
-                        <h5>UI/UX Design</h5>
-                      </div>
-                      <div className="item">
-                        <img src={meter3} alt="Image"/>
-                        <h5>Backend Development</h5>
-                      </div>
-                      <div className="item">
-                        <img src={meter3} alt="Image"/>
-                        <h5>Ai Engineer</h5>
-                      </div>
-                    </Carousel>
-                  </div>            
-                </Col>
-            </Row>
-        </Container>
-        <img className="background-image-left" src={colorSharp}/>
-    </section>
-)
-}
+                <h2>Technologies I Work With</h2>
+                <div className="skills-wrapper">
+                    {/* Sidebar Tabs */}
+                    <div className="skills-sidebar">
+                        {Object.keys(skillsData).map((tab) => (
+                            <button
+                                key={tab}
+                                className={`skill-tab ${activeTab === tab ? 'active' : ''}`}
+                                onClick={() => setActiveTab(tab)}
+                            >
+                                {tab}
+                            </button>
+                        ))}
+                    </div>
+
+                    {/* Skills Grid */}
+                    <div className="skills-content">
+                        <div className="skills-grid">
+                            {skillsData[activeTab].map((skill, index) => (
+                                <div key={index} className="skill-item">
+                                    <img src={skill.icon} alt={skill.name} />
+                                    <p>{skill.name}</p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </Container>
+        </section>
+    );
+};
