@@ -53,7 +53,7 @@ export const Banner = () => {
                       <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                       <span className="tagline">Welcome to my Portfolio</span>
                       <h1>{`Hi I'm Shariq `}<br/><span className="wrap">{text}</span></h1>
-                      <p>Hey there! I'm a CS student on a mission 🚀—constantly coding, vibing, and crushing tech challenges. I live for pushing boundaries, experimenting with new tech, and turning wild ideas into reality. Currently, I'm deep into building Cross-Platform Mobile Apps because why settle for one platform when you can own them all? Let's code, create, and make some digital magic together! 💻🔥 </p>
+                      <p>From dynamic frontends in React to scalable backends with Node.js and MongoDB, I build real-time, user-focused applications where performance meets polished UI/UX.</p>
                       <a href="/resume.pdf" download="Shariq_Resume.pdf" className="resume-btn">
                         <button>Resume <ArrowRightCircle size={25} /></button>
                       </a>

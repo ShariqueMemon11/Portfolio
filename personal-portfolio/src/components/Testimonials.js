@@ -9,14 +9,14 @@ export const Testimonials = () => {
             role: "Project Manager, Ideagist"
         },
         {
-            text: "Shariq delivered exceptional work on our mobile app. His attention to detail and problem-solving skills are outstanding. Highly recommended!",
-            name: "Sarah Johnson",
-            role: "CEO, Tech Innovations"
+            text: "During the course of his internship, Mr. Muhammad Shariq demonstrated a positive attitude, eagerness to learn, and a professional approach towards assigned tasks. He actively participated in various departmental activities and was able to apply his academic knowledge effectively in practical scenarios. He showed good communication skills, teamwork, and a willingness to take on challenges.",
+            name: "Amir Nazir",
+            role: "HR Manager, Fidsor Pvt. Limited"
         },
         {
-            text: "Working with Shariq was a great experience. He understood our requirements perfectly and delivered beyond expectations.",
-            name: "Michael Chen",
-            role: "Product Lead, StartupHub"
+            text: "Shariq has shown exceptional dedication and skill in mobile app development. His ability to learn quickly and adapt to new technologies is impressive. He consistently delivers quality work and is a valuable team member.",
+            name: "Tehreem",
+            role: "Team Lead, Fidsor.net"
         }
     ];
 

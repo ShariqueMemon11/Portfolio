@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 export const Experience = () => {
     const experiences = [
         {
-            company: "Fidsor.net",
+            company: "Fidsor Pvt. Limited",
             title: "React Native Developer Intern",
             duration: "July 2025 - Sep 2025",
             points: [
