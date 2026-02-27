@@ -13,7 +13,7 @@ export const Contact = () => {
     }
     const [formDetails , setformDetalis] = useState(formInitialDetails)
     const [buttonText , setButtonText ] = useState('Send')
-    const [status , setStatus] = useState({})
+    // const [status , setStatus] = useState({})
 
     const onFormUpdate =(category , value) => {
         setformDetalis({
@@ -70,12 +70,7 @@ export const Contact = () => {
                              <textarea rows='6' value={formDetails.Message} placeholder="Message.." onChange={(e) => onFormUpdate('Message', e.target.value)}/>
                             <button type="submit"><span>{buttonText}</span></button>
                             </Col>
-                            {
-                                status.message && 
-                                <Col>
-                                <p className={status.success === false ? 'danger' : 'success'}>{status.message}</p>
-                                </Col>
-                            }
+                            {/* Status message removed - using alert instead */}
                         </Row>
                      </form>
                      
