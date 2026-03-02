@@ -45,10 +45,16 @@ export const NavBar = () => {
           </Nav>
           <span className='navbar-text'>
             <div className='social-icons'>
-                <a href='https://www.linkedin.com/in/sharique-memon/' target='_blank' rel='noopener noreferrer'> <img src={navIcon1} alt='LinkedIn'/> </a>
+                <a href='https://www.linkedin.com/in/shariq-memon-91438b24b/' target='_blank' rel='noopener noreferrer'> <img src={navIcon1} alt='LinkedIn'/> </a>
                 <a href='https://github.com/ShariqueMemon11' target='_blank' rel='noopener noreferrer' className='github-icon'> <Github size={20} /> </a>
             </div>
-            <button className='vvd' onClick={() => console.log('contact us')}><span>Let's Connect</span></button>
+            <button className='vvd' onClick={() => {
+              if (location.pathname !== '/') {
+                window.location.href = '/#connect';
+              } else {
+                document.getElementById('connect')?.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}><span>Let's Connect</span></button>
           </span>
         </Navbar.Collapse>
       </Container>

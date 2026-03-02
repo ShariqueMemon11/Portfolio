@@ -16,6 +16,14 @@ export const Contact = () => {
     // const [status , setStatus] = useState({})
 
     const onFormUpdate =(category , value) => {
+        // If updating phone, only allow numbers, +, -, and spaces
+        if (category === 'phone') {
+            const phoneRegex = /^[0-9+\-\s]*$/;
+            if (!phoneRegex.test(value)) {
+                return; // Don't update if invalid characters
+            }
+        }
+        
         setformDetalis({
             ...formDetails,
             [category]:value
@@ -61,10 +69,10 @@ export const Contact = () => {
                              <input type="text" value={formDetails.Name} placeholder="Name" onChange={(e) => onFormUpdate('Name', e.target.value)}/>
                             </Col>
                             <Col sm='6' className="px-1">
-                             <input type="email" value={formDetails.email} placeholder="Email" onChange={(e) => onFormUpdate('Name', e.target.value)}/>
+                             <input type="email" value={formDetails.email} placeholder="Email" onChange={(e) => onFormUpdate('email', e.target.value)}/>
                             </Col>
                             <Col sm='6' className="px-1">
-                             <input type="tel" value={formDetails.phone} placeholder="Phone No" onChange={(e) => onFormUpdate('Name', e.target.value)}/>
+                             <input type="tel" value={formDetails.phone} placeholder="Phone No" onChange={(e) => onFormUpdate('phone', e.target.value)}/>
                             </Col>
                             <Col>
                              <textarea rows='6' value={formDetails.Message} placeholder="Message.." onChange={(e) => onFormUpdate('Message', e.target.value)}/>
