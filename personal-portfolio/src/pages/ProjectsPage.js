@@ -23,13 +23,37 @@ export const ProjectsPage = () => {
     // App Projects
     const appProjects = [
         {
-            name: "Finance Tracker",
+            name: "KAPL Cultural Library",
             description: [
-                "Cross-platform mobile application for personal finance management.",
-                "Track expenses, income, and manage budgets efficiently.",
-                "Real-time synchronization across devices with secure data storage."
+                "A production-ready, cross-platform mobile application built for a cultural library platform using React Native (TypeScript) and Firebase.",
+                "Covers the full range of a modern digital library experience — authentication, e-services, events, news, announcements, multimedia, and user profile management — across 10+ screens.",
+                "White-label-ready architecture: app structure, navigation, and theming are server-controlled via a CMS-driven API, meaning the app can be reconfigured without a new release."
             ],
-            keyFeatures: ["Expense Tracking", "Budget Management", "Financial Reports", "Multi-currency Support"],
+            keyFeatures: [
+                "Nafath National ID Verification",
+                "7-Language RTL/LTR Support",
+                "Dynamic CMS-Driven Rendering",
+                "Encrypted Session Storage",
+                "Real-Time API Sync",
+                "Firebase Crashlytics"
+            ],
+            technology: [
+                { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+                { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" }
+            ],
+            screenshot: [Medi_Care],
+            demoLink: "",
+            githubLink: ""
+        },
+        {
+            name: "Gold Trade Tracker",
+            description: [
+                "Full-stack mobile app for gold trading management using React Native and Firebase.",
+                "Implements 5+ core screens for multi-user accounts with real-time profit/loss calculations.",
+                "Automated currency conversion and detailed sale/purchase reporting."
+            ],
+            keyFeatures: ["Multi-user Accounts", "Currency Conversion", "Profit/Loss Calculator", "Sale & Purchase Reports"],
             technology: [
                 { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
                 { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
@@ -37,7 +61,7 @@ export const ProjectsPage = () => {
             ],
             screenshot: [finance_tracker],
             demoLink: "",
-            githubLink: "https://github.com"
+            githubLink: ""
         },
         {
             name: "Medi Care",
@@ -60,6 +84,35 @@ export const ProjectsPage = () => {
 
     // Web Projects
     const webProjects = [
+        {
+            name: "Alvora Admin Portal",
+            description: [
+                "A full-featured internal admin portal built for managing all content on the Alvora company website — from projects and services to blog posts, job listings, certificates, and contact inquiries.",
+                "Built as a single-page application consuming a typed Supabase-backed data layer, with JWT-based authentication, protected/guarded routing, and a reusable component library.",
+                "Code-split lazy routing across 20+ routes with a collapsible sidebar, breadcrumb navigation, rich-text editing (Jodit React), and Recharts-powered dashboard analytics."
+            ],
+            keyFeatures: [
+                "15+ CMS Content Modules",
+                "JWT Auth & Protected Routes",
+                "Server-Side Paginated DataGrid",
+                "Smart File Storage & Orphan Cleanup",
+                "Lazy Routing with React.lazy + Suspense",
+                "Rich Text Editor (Jodit React)",
+                "Recharts Analytics Dashboard",
+                "Node.js Seed Scripts"
+            ],
+            technology: [
+                { name: "React 19", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+                { name: "Vite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" },
+                { name: "Material UI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" },
+                { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" }
+            ],
+            screenshot: [Executive_dashboard],
+            demoLink: "",
+            githubLink: "",
+            modules: "Dashboard, About Us, Projects, Project Ranges, Certificates, Blog, Jobs/Careers, Job Applications, Contact Inquiries, Newsletters, FAQs, Policies, Services, Sectors, Team, Social Links, Footer Info."
+        },
         {
             name: "Virtual School",
             description: [
@@ -88,13 +141,13 @@ export const ProjectsPage = () => {
             githubLink: "https://github.com/ShariqueMemon11/Virtual-Pre-School-DEMO"
         },
         {
-            name: "Decentralized Application (DApp)",
+            name: "Decentralized Task Management",
             description: [
-                "Blockchain-based decentralized application built on Ethereum.",
-                "Smart contract integration for secure and transparent transactions.",
-                "Web3 wallet connectivity for seamless user experience."
+                "Web3 blockchain-integrated task management app built with React.js, Solidity, and Ethereum.",
+                "Smart contract handles 5+ functions for tamper-proof, on-chain task tracking.",
+                "Web3 wallet connectivity for seamless user interaction with the Ethereum network."
             ],
-            keyFeatures: ["Smart Contracts", "Web3 Integration", "Cryptocurrency Transactions", "Decentralized Storage"],
+            keyFeatures: ["Smart Contracts", "Web3 Integration", "On-Chain Task Tracking", "Wallet Connectivity"],
             technology: [
                 { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
                 { name: "Solidity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg" },
@@ -126,38 +179,37 @@ export const ProjectsPage = () => {
     // AI Projects
     const aiProjects = [
         {
-            name: "Q&A Bot",
+            name: "QA Bot — RAG System",
             description: [
-                "Intelligent question-answering bot powered by natural language processing.",
-                "Context-aware responses with machine learning algorithms.",
-                "Continuous learning from user interactions for improved accuracy."
+                "AI-powered question-answering bot built using Python and a RAG (Retrieval-Augmented Generation) architecture.",
+                "Integrates LLM APIs for intelligent, context-aware responses grounded in document content.",
+                "Designed for accurate, source-aware answers rather than hallucinated responses."
             ],
-            keyFeatures: ["Natural Language Processing", "Context Understanding", "Machine Learning", "Multi-language Support"],
+            keyFeatures: ["RAG Architecture", "LLM Integration", "Document-Based QA", "Context-Aware Responses"],
             technology: [
                 { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-                { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
+                { name: "LangChain", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
                 { name: "Flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" }
             ],
             screenshot: [QA_Bot],
             demoLink: "",
-            githubLink: "https://github.com"
+            githubLink: ""
         },
         {
             name: "Trading Bot",
             description: [
-                "Automated cryptocurrency trading bot with AI-powered strategies.",
-                "Real-time market analysis and predictive algorithms.",
-                "Risk management and portfolio optimization features."
+                "Automated trading assistant with AI API integration and real-time data processing.",
+                "Python-based analytics for market insights and signal generation.",
+                "Modular architecture supporting multiple trading strategies."
             ],
-            keyFeatures: ["Automated Trading", "Market Analysis", "Risk Management", "Portfolio Optimization"],
+            keyFeatures: ["AI API Integration", "Real-Time Data Processing", "Market Analytics", "Automated Signals"],
             technology: [
                 { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-                { name: "TensorFlow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" },
                 { name: "Pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" }
             ],
             screenshot: [trading_bot],
             demoLink: "",
-            githubLink: "https://github.com"
+            githubLink: ""
         }
     ];
 
@@ -209,7 +261,7 @@ export const ProjectsPage = () => {
     );
 };
 
-const ProjectCard = ({ name, description, keyFeatures, technology, screenshot, demoLink, githubLink }) => {
+const ProjectCard = ({ name, description, keyFeatures, technology, screenshot, demoLink, githubLink, modules }) => {
     const [currentImage, setCurrentImage] = useState(0);
 
     const nextSlide = () => {
@@ -304,6 +356,16 @@ const ProjectCard = ({ name, description, keyFeatures, technology, screenshot, d
                     ))}
                 </div>
             </div>
+
+            {/* Modules (optional) */}
+            {modules && (
+                <div className="project-section">
+                    <h3>Modules</h3>
+                    <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "14px", lineHeight: "1.7", margin: 0 }}>
+                        {modules}
+                    </p>
+                </div>
+            )}
         </div>
     );
 };

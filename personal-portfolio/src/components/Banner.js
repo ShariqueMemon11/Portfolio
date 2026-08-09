@@ -9,7 +9,7 @@ export const Banner = () => {
 
     const [LoopNum , setLoopNum] = useState(0);
     const [IsDeleting , setIsDeleting] = useState(false);
-    const toRotate = ["Web Developer", "Mobile App Developer", "Frontend Developer", "Ui/Ux Designer", "Ai/Ml engineer", "Backend Developer", "Game Developer"];
+    const toRotate = ["React Native Developer", "Mobile App Developer", "Frontend Developer", "Full Stack Developer", "AI/ML Engineer"];
     const [text , settext] = useState('');
     const period=1700;
     const [delta , setdelta] = useState(350 - Math.random() * 100)
@@ -54,7 +54,7 @@ export const Banner = () => {
                       <div className={isVisible ? "animate__animated animate__bounce" : ""}>
                       <span className="tagline">Welcome to my Portfolio</span>
                       <h1>{`Hi I'm Shariq `}<br/><span className="wrap">{text}</span></h1>
-                      <p>From dynamic frontends in React to scalable backends with Node.js and MongoDB, I build real-time, user-focused applications where performance meets polished UI/UX.</p>
+                      <p>Software Engineer specializing in React Native and modern web technologies. I build production-ready mobile apps, CMS platforms, and API-driven systems using React Native, React, TypeScript, Firebase, Supabase, and Node.js.</p>
                       <a href="/resume.pdf" download="Shariq_Resume.pdf" className="resume-btn">
                         <button>Resume <ArrowRightCircle size={25} /></button>
                       </a>

@@ -2586,3 +2586,228 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     text-align: center;
   }
 }
+
+
+/************ Project Card — Details Button & Modal ************/
+
+.proj-details-btn {
+  display: inline-block;
+  margin-top: 14px;
+  padding: 8px 22px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Centra', sans-serif;
+}
+
+.proj-details-btn:hover {
+  background: #fff;
+  color: #121212;
+  transform: scale(1.05);
+}
+
+/* Backdrop */
+.proj-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Modal container */
+.proj-modal {
+  background: #1a1a2e;
+  border: 1px solid rgba(170, 54, 124, 0.4);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 760px;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(170, 54, 124, 0.2);
+  overflow: hidden;
+}
+
+/* Modal header */
+.proj-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 28px 18px 28px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, rgba(170, 54, 124, 0.15) 0%, rgba(74, 47, 189, 0.15) 100%);
+  flex-shrink: 0;
+}
+
+.proj-modal-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 6px 0;
+  font-family: 'Centra', sans-serif;
+}
+
+.proj-modal-subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: italic;
+}
+
+.proj-modal-close {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+
+.proj-modal-close:hover {
+  background: rgba(170, 54, 124, 0.4);
+  border-color: rgba(170, 54, 124, 0.7);
+  transform: scale(1.1);
+}
+
+/* Modal scrollable body */
+.proj-modal-body {
+  padding: 24px 28px 28px 28px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.proj-modal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.proj-modal-body::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+
+.proj-modal-body::-webkit-scrollbar-thumb {
+  background: rgba(170, 54, 124, 0.5);
+  border-radius: 3px;
+}
+
+.proj-modal-overview {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 15px;
+  line-height: 1.75;
+  margin: 0 0 24px 0;
+}
+
+.proj-modal-section {
+  margin-bottom: 24px;
+}
+
+.proj-modal-section h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 14px;
+  font-family: 'Centra', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  opacity: 0.85;
+}
+
+/* Features list */
+.proj-modal-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.proj-modal-features li {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  line-height: 1.65;
+  padding-left: 20px;
+  position: relative;
+}
+
+.proj-modal-features li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #AA367C;
+  font-size: 16px;
+}
+
+.proj-modal-feature-title {
+  font-weight: 700;
+  color: #fff;
+}
+
+.proj-modal-feature-desc {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Tech badges */
+.proj-modal-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.proj-modal-tech-badge {
+  padding: 6px 16px;
+  background: rgba(170, 54, 124, 0.15);
+  border: 1px solid rgba(170, 54, 124, 0.4);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* Modules text */
+.proj-modal-modules {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .proj-modal {
+    max-height: 90vh;
+    border-radius: 16px;
+  }
+
+  .proj-modal-header {
+    padding: 18px 20px 14px 20px;
+  }
+
+  .proj-modal-title {
+    font-size: 20px;
+  }
+
+  .proj-modal-body {
+    padding: 18px 20px 22px 20px;
+  }
+
+  .proj-modal-overview {
+    font-size: 14px;
+  }
+}

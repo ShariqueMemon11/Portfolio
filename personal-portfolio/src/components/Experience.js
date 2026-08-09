@@ -3,20 +3,22 @@ import { Container, Row, Col } from "react-bootstrap";
 export const Experience = () => {
     const experiences = [
         {
-            company: "Fidsor Pvt. Limited",
-            title: "React Native Developer Intern",
-            duration: "July 2025 - Sep 2025",
+            company: "Fidsor.net",
+            title: "React Native Developer",
+            duration: "Feb 2026 – Aug 2026",
             points: [
-                "Built and deployed mobile applications using React Native and Firebase.",
-                "Integrated real-time database synchronization with Firebase Firestore.",
-                "Designed reusable UI components to improve scalability and maintainability.",
-                "Optimized application performance and reduced loading time."
+                "Developed and maintained production-ready cross-platform mobile applications using React Native, TypeScript, Firebase, and REST APIs, implementing 10+ core features including secure authentication and real-time data synchronization.",
+                "Contributed to the KAPL Cultural Library mobile app, implementing Nafath national ID verification, multilingual RTL/LTR support, encrypted session management, and role-based access control.",
+                "Built the Alvora Admin Portal (React 19, TypeScript, Vite, Material UI) for managing 15+ CMS modules including projects, blogs, careers, certificates, and inquiries.",
+                "Designed reusable UI components — dynamic forms, a server-side paginated DataGrid, file upload modules, and protected authentication flows — reducing feature development time by approximately 30%.",
+                "Integrated Supabase-backed APIs and collaborated closely with backend engineers to ship scalable, secure, maintainable features, including barcode scanning and image upload utilities."
             ],
             icons: [
-                { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-                { name: "Node.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+                { name: "React Native", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+                { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
                 { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" },
-                { name: "MongoDB", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" }
+                { name: "Supabase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg" },
+                { name: "Material UI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/materialui/materialui-original.svg" }
             ]
         }
     ];
