@@ -8,6 +8,7 @@ import QA_Bot from "../assets/img/QA_Bot.png"
 import Executive_dashboard from "../assets/img/Executive_dashboard.png"
 import finance_tracker from "../assets/img/finance_tracker.png"
 import Medi_Care from "../assets/img/Medi_Care.png"
+import Kapl from "../assets/img/KAPL_App_Collage.png"
 // Virtual School Images
 import VS_Login from "../assets/img/VirtualSchool/Login.PNG"
 import VS_Register from "../assets/img/VirtualSchool/Register.PNG"
@@ -42,7 +43,7 @@ export const ProjectsPage = () => {
                 { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
                 { name: "Firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" }
             ],
-            screenshot: [Medi_Care],
+            screenshot: [Kapl],
             demoLink: "",
             githubLink: ""
         },
